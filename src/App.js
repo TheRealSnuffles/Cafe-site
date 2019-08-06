@@ -123,6 +123,7 @@ function App() {
                 </tr>
               </table>
             </div>
+            <div></div>
             <img src={image} src="Waffles"></img>
         </div>
         </div>
