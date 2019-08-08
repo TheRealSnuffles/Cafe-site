@@ -1,42 +1,46 @@
 .navigation{
-  margin: 0px;
-  padding: 0px;
   background-color: rgb(0, 0, 0);
-  overflow: auto;
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  position: sticky;
+  top: 0px;
+  z-index: 99999;
 }
 
 .ulNav{
-  padding: 0px;
-  margin: 0px;
-  display: flex;
-  list-style-type: none;
-  justify-content: space-around;
+  display: table-row;
 }
 
-.buttons{
-  margin: 0px;
-  padding: 2% 6%;
-  list-style-type: none;
+.navigation .ulNav{
+  list-style: none;
   text-align: center;
-  background-color: black;
-  cursor: pointer;
+}
+
+.ulNav .buttons{
+  display: table-cell;
+}
+
+.navigation .ulNav .buttons .anchor{
+  display: block;
+  text-decoration: none;
+  padding: 10px 0;
 }
 
 .buttons:hover .anchor{
   color:black;
-}
-
-.buttons:hover{
-  background-color: rgb(255, 248, 239);
+  background-color: beige;
 }
 
 .anchor{
   text-decoration: none;
-  color: white;   
+  color: white;
+  background-color: black;  
 }
 
 .anchor:hover{
   color: black;
+  background-color: beige;
 }
 
 .coffee{
@@ -65,7 +69,7 @@
 .cafe{
   padding: 10px;
   font-size: 600%;
-  color: rgba(212, 187, 76, 0.993);
+  color: rgba(212, 169, 76, 0.993);
   position: relative;
   margin: 0px;
   text-align: center;
@@ -76,13 +80,13 @@
   position: absolute;
   top: 0px;
   right: 0px;
-  background-color: rgb(243, 223, 201);
+  background-color: rgb(250, 235, 215);
   font-size: 70%;
   padding: 2px;
 }
 
-.aboutContainer{
-  background-color: rgba(231, 218, 202, 0.966);
+.container{
+  background-color: rgba(247, 224, 195);
 }
 
 .aC{
@@ -109,10 +113,10 @@ h4{
 }
 
 .quote{
-  border-left: 5px solid rgba(87, 80, 80, 0.829);
+  border-left: 5px solid rgb(133, 89, 48);
   padding: 1px 15px;
   margin: 0px 10px;
-  background-color: beige;
+  background-color: rgb(245, 245, 220);
 }
 
 .q{
@@ -122,7 +126,7 @@ h4{
 }
 
 .coffee2C{
-  padding: 20px;
+  padding: 10px;
 }
 
 .c2{
@@ -137,13 +141,16 @@ img{
 
 .menuContainer{
   text-align: center;
+  padding: 10px;
 }
 
 h5{
-  margin: 30px 0px;
+  text-align: center;
+  margin: 30px;
 }
 
-#menu{
+.menu{
+  margin: 0px;
   background-color: black;
   padding: 2px 10px;
   font-size: 25px;
@@ -151,10 +158,10 @@ h5{
 }
 
 table{
-  padding: 5px;
+  width: 100%;
   text-align: left;
   border: 1px solid black;
-  background-color: rgb(218, 198, 163);
+  background-color: rgb(231, 193, 143);
   border-collapse: collapse;
 }
 
@@ -164,10 +171,45 @@ th{
 }
 
 td{
-  background-color: rgb(248, 228, 198);
+  background-color: rgb(247, 232, 206);
   padding: 8px;
   font-size: 15px;
   font-weight: 500;
+}
+
+.wAffles{
+  max-width: 100%;
+  padding: 20px 0;
+}
+
+.where{
+  margin: 0px;
+  background-color: black;
+  padding: 2px 10px;
+  font-size: 25px;
+  color: rgb(250, 235, 215);
+}
+
+.tag{
+  background-color: black;
+  font-size: 20px;
+  color: rgb(250, 235, 215);
+  padding: 0px 5px;
+}
+
+.data{
+  width: 50%;
+  overflow: visible;
+  padding: 10px;
+  border: 2px solid rgb(163, 126, 77);
+}
+
+.button{
+  background-color: black;
+  font-size: 20px;
+  color: rgb(250, 235, 215);
+  padding: 5px;
+  border: none;
 }
 
 @media only screen and (min-width: 1000px){
@@ -183,8 +225,7 @@ td{
   .aC{
     padding: 1% 15%;
   }
-  .buttons{
-    padding: 2% 10%;
+  .navigation .ulNav .buttons .anchor{
+    padding: 20px 0;
   }
-  
 }
